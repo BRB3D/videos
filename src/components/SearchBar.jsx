@@ -4,7 +4,7 @@ import React from 'react';
 class SearchBar extends React.Component {
   constructor (props) {
     super(props); 
-    this.state = {term: 'hi'};
+    this.state = {term: ''};
   }
 
   onInputChange = (event) => {
@@ -23,7 +23,8 @@ class SearchBar extends React.Component {
       <form onSubmit={this.onFormSubmit} className='ui form'>
         <div className='field'>
           <label>Video Search</label>
-          <input 
+          <input
+          placeholder='Search Videos' 
           type='text' 
           value={this.state.term} onChange={this.onInputChange} />
         </div>
