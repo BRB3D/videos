@@ -4,7 +4,7 @@ import VideoItem from './VideoItem';
 export default function VideoList({ videos }) {
   //props.videos
   const renderedList = videos.map((video) => {
-    return <VideoItem />
+    return <VideoItem video={video}/>
   })
-  return <div>{renderedList}</div>
+  return <div className='ui relaxed divided list' >{renderedList}</div>
 }
